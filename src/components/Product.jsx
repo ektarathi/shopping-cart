@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../assets/scss/product.scss";
 class Product extends Component {
   state = {
@@ -43,7 +44,14 @@ class Product extends Component {
         <div className="product">
           {items.map(item => (
             <div key={item.productId} className="product__item">
-              <div className="product__item__details"> 
+              <div className="product__item__details">
+                <Link to={`/${item.title}/${item.productId}`}>
+                  <img
+                    src={item.image}
+                    className="product__item__image"
+                    alt={item.title}
+                  />
+                </Link>
                 <div className="product__item__name">{item.title}</div>
                 <div className="product__item__price">£{item.price.now}</div>
               </div>
