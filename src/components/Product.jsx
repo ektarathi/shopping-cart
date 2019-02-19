@@ -34,7 +34,6 @@ class Product extends Component {
 
   render() {
     const { error, isLoaded, items } = this.state;
-    console.log("Items", items);
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {

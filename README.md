@@ -44,4 +44,6 @@ Added node-sass npm module for scss stylesheet.
 Added react-ellipsis-text and react-responsive-carousel.
 Used BEM for css styling
 
+Getting error when making API call: "No 'Access-Control-Allow-Origin' header is present on the requested resource", so I added chrome extension in order to fetch API data.
+
 Note: The Dishwasher price block is added twice to make it hidden and visible according to Landscape and Portrait mode designs.
