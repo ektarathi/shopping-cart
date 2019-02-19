@@ -39,4 +39,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
+Implemented the code base using create-react-app.
 Added node-sass npm module for scss stylesheet.
+Added react-ellipsis-text and react-responsive-carousel.
+Used BEM for css styling
+
+Note: The Dishwasher price block is added twice to make it hidden and visible according to Landscape and Portrait mode designs.
