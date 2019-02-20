@@ -54,9 +54,11 @@
     }
 
     &__carousel {
+      margin-top: -10px;
       &--carousel_items {
         width: 45%;
         margin: 10px auto;
+        padding-bottom: 10px;
       }
     }
 
