@@ -4,11 +4,15 @@
   background-color: #f2f2f2;
   &__heading {
     font-size: 20px;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    padding: 10px 13px;
     background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto auto;
     @media screen and (orientation: portrait) {
       background-color: #fff;
+      grid-template-columns: 7% auto;
     }
   }
   &__content {

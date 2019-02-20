@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { Carousel } from "react-responsive-carousel";
 import EllipsisText from "react-ellipsis-text";
+import { withRouter } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import "../assets/scss/product_details.scss";
 class ProductDetails extends Component {
   state = {
@@ -37,7 +40,6 @@ class ProductDetails extends Component {
   }
   render() {
     const { error, isLoaded, items } = this.state;
-    console.log("Items", items);
 
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -46,7 +48,16 @@ class ProductDetails extends Component {
     } else {
       return (
         <div className="product_details">
-          <div className="product_details__heading">{items.title}</div>
+          <div className="product_details__heading">
+            <div>
+              <FontAwesomeIcon
+                style={{ cursor: "pointer" }}
+                icon={faChevronLeft}
+                onClick={this.props.history.goBack}
+              />
+            </div>
+            <div>{items.title}</div>
+          </div>
           <div className="product_details__content">
             <div className="product_details__content__section1">
               <div className="product_details__content__topSection">
@@ -133,4 +144,4 @@ class ProductDetails extends Component {
   }
 }
 
-export default ProductDetails;
+export default withRouter(ProductDetails);
